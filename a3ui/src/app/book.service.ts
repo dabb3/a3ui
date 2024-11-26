@@ -16,4 +16,8 @@ export class BookService {
   createBook(book: any){
     return axios.post(this.apiUrl, book);
   }
+
+  searchBook(title: string) {
+    return axios.get(`${this.apiUrl}/search`, { params: { title }});
+  }
 }
